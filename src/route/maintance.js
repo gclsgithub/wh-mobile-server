@@ -44,9 +44,6 @@ maintance.post(SHOW_LIST_URL, bodyParser.urlencoded({ extend: true }), (req, res
     }
 
     let condition = {
-        where: {
-            own_user_id: login_id
-        },
         offset: parseInt(offset),
         limit: parseInt(limit)
     };
@@ -127,11 +124,11 @@ maintance.post(SUBMIT_URL, upload.any(), (req, res) => {
 
     let postData = JSON.parse(req.body.data)
 
-    const { fl, mc, ys, cz, dd, sj, express_code, connect_peoples, maintenance_type } = postData
+    const { fl, mc, ys, cz, dd, sj, express_code, nr,connect_peoples, maintenance_type } = postData
 
     if (fl == null
         || mc == null
-        || bad_typyse_major_subject == null
+        || maintenance_type == null
         || cz == null
         || ys == null
         || dd == null
@@ -162,7 +159,7 @@ maintance.post(SUBMIT_URL, upload.any(), (req, res) => {
         dd:dd,
         sj:sj,
         dh:dh,
-        url:url,
+        url:filepathStr,
         nr:nr,
         member:member,
         zt:zt

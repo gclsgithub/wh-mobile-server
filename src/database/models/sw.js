@@ -58,11 +58,6 @@ module.exports = (sequelize) => {
             field: "member",
             allowNull: true
         },
-        add_info_templateId: {
-            type: model_Sequelize.DataTypes.INTEGER,
-            field: "add_info_templateId",
-            allowNull: true
-        },
         zt: {
             type: model_Sequelize.DataTypes.STRING(500),
             field: "zt",

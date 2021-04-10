@@ -2,25 +2,22 @@
   <div class="login">
     <el-container>
       <el-header>
-        <div class="logo" align='center'>
-          <a href='http://cs.hytc.edu.cn/' >淮阴师范计算机学院<br>
-          校园失物wechat申报平台
+        <div class="logo" align="center">
+          <a href="http://cs.hytc.edu.cn/"
+            >淮阴师范计算机学院<br />
+            校园失物wechat申报平台
             <!-- <img src="../public/logo2.jpg" alt="" class="img" > -->
           </a>
         </div>
       </el-header>
 
       <el-main>
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-
-          <el-tab-pane name="third_login">
-            <span slot="label" @click="wechat_login">
-              <i class="el-icon-mobile-telphone">微信登录</i>
-            </span>
-          </el-tab-pane>
-        </el-tabs>
+      
+        <div align="right" >
+          <button v-on:click="wechat_login">微信登录</button>
+        
+        </div>
       </el-main>
-
     </el-container>
     <OutLayoutFooter></OutLayoutFooter>
   </div>
@@ -30,14 +27,14 @@
 import Vue from "vue";
 import ElementUI from "element-ui";
 import http from "vue-resource";
-import OutLayoutFooter from './OutLayout/Footer.vue'
+import OutLayoutFooter from "./OutLayout/Footer.vue";
 
 Vue.use(ElementUI);
 Vue.use(http);
 export default {
   name: "login",
-  components:{
-    OutLayoutFooter
+  components: {
+    OutLayoutFooter,
   },
   data() {
     let check_username = (rule, value, callback) => {
@@ -76,11 +73,11 @@ export default {
     wechat_login() {
       let get_url = this.$common.httpUrl + "/wechatAu/doLogin";
       this.$http.get(get_url).then((response) => {
-         console.log("response", response);
-	if (response.body.code != 200 ){
-		let sendUrl = response.body;
-		window.location.href=sendUrl;
-	}
+        console.log("response", response);
+        if (response.body.code != 200) {
+          let sendUrl = response.body;
+          window.location.href = sendUrl;
+        }
       });
     },
     login_submit() {

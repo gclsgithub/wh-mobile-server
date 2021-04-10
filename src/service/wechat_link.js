@@ -19,8 +19,8 @@ let User = require("../database/models/m_user")(sequelize)
 // };
 const config = {
 	token: '123456',
-	appid: 'wx06aed045568372e8',
-	secret: '100c62247c941ea284289a8896cec86f',
+	appid: 'wxf1081c1cc9dba801',
+	secret: '3972b3add2b741660865f7438a781df3',
 	grant_type: 'client_credential'
 };
 
@@ -28,7 +28,7 @@ const template_ids = [
 	{ id: "JersX8xVatNOIsQh9SzHZEEusR5LTkx1LPuj9qnNsS8" }
 ]
 
-const call_back_url = "http://marinelite.cn/admin/wechatAu/code";
+const call_back_url = "http://hytc.natapp1.cc/admin/wechatAu/code";
 
 var util = require('util');
 

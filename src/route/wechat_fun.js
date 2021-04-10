@@ -33,7 +33,7 @@ wechat_fun.get(WECHAT_LOGIN_SLASH, (req, res) => {
     dologinAccesstoken(code,redis); 
 
     console.log("Login Success!!!");
-    res.redirect("http://marinelite.cn/maintance_list");
+    res.redirect("http://192.168.0.150:8888/maintance_list");
 })
 
 module.exports = wechat_fun

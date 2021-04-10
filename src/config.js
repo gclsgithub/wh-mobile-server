@@ -1,11 +1,11 @@
 const config = {
     // 数据库�?�置
     database: {
-        DATABASE: 'saiyang_db',
-        USERNAME: 'ubuntu',
-        PASSWORD: '123456',
+        DATABASE: 'magua',
+        USERNAME: 'magua',
+        PASSWORD: '12345a@A12345',
         PORT: '3306',
-        HOST: '52.83.91.168'
+        HOST: '52.68.38.197'
     }
 };
 

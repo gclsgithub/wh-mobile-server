@@ -361,19 +361,13 @@ export default {
       }
     };
     let check_product_type = (rule, value, callback) => {
-      if (this.add_form.product_type == null || this.add_form.product_type == "") {
+      if (this.add_form.fl == null || this.add_form.fl == "") {
         return callback(new Error("请选择产品种别"));
       } else {
         callback();
       }
     };
-    let check_product_seriable_number = (rule, value, callback) => {
-      if (this.add_form.product_seriable_number == null || this.add_form.product_seriable_number == "") {
-        return callback(new Error("请选择产品序列号"));
-      } else {
-        callback();
-      }
-    };
+    
     let check_descp = (rule, value, callback) => {
       if (this.add_form.nr == null || this.add_form.nr == "") {
         return callback(new Error("检查丢失物品描述"));
@@ -677,7 +671,7 @@ export default {
         headers: { "Content-Type": "multipart/form-data" },
       };
 
-      let post_url = this.$common.httpUrl + "/maintance/dosubmit";
+      let post_url = this.$common.httpUrl + "admin/maintance/dosubmit";
       console.log(formData);
       this.$http.post(post_url, formData, config).then((response) => {
         console.log("response", response);

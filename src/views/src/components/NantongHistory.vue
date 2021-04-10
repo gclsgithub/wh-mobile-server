@@ -15,21 +15,21 @@
                 style="width:100%"
                 >
                 <el-table-column
-                    prop="product_name"
+                    prop="mc"
                     width="70px"
                     header-align="center"
                     align="center"
                     label="失物名">
                 </el-table-column>
                 <el-table-column
-                    prop="status_text"
+                    prop="zt"
                     width="80px"
                     header-align="center"
                     align="center"
                     label="申请状态">
                 </el-table-column>
                 <el-table-column
-                    prop="create_time_text"
+                    prop="sj"
                     min-width="80px"
                     header-align="center"
                     align="center"
@@ -267,7 +267,6 @@ export default {
       this.$router.push({ path: "/maintance_page" });
     },
     get_list(){
-
       let post_url = this.$common.httpUrl + "/maintance/list";
 
       this.sear_form.offset               =           (this.page_info.pageIndex - 1) * this.page_info.pageSize;
